@@ -1,13 +1,30 @@
-# Program #2: Math Quiz
-# Write a program that gives simple math quizzes.  The program should display two random numbers to be added, such as
+#By: Sabria Fafach
+#Date: Febuary 2, 2025
+#Title: program_2.py
 
-#     247
+def get_answer(number_1,number_2):
+    print(f"    {number_1}")
+    print(f"+   {number_2:0.0f}")
+    print("------------")
+    answer= int(input("Enter your answer:"))
+    return answer
 
-# + 129
 
-# ------
+def sum_numbers(number_1,number_2):
+    sum=number_1+number_2
+    return sum
 
-# The program should allow the student to enter the answer.  
-# If the answer is correct, a message of congratulations should be displayed.  
-# If the answer is incorrect a message showing the correct answer should be displayed.  
-# The program must use a function that accomplishes part of the needed tasks.
+def main():
+    for number_1 in (326,457,598,487,569,265,254):
+        answer=get_answer(number_1,number_2)
+        sum=sum_numbers(number_1,number_2)
+        if answer==sum:
+            print("Congratulations you got the right answer!")
+        else:
+            print("Sorry you got the wrong answer.")
+            return
+
+number_2=50
+while number_2<1000:
+    number_2=(number_2*3)/2
+    main()
